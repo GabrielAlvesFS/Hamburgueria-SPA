@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const StyledLi = styled.li`
+export const MenuCardLi = styled.li`
   list-style-type: none;
 `;
 
-export const StyledLink = styled(Link)`
+export const MenuCardLink = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
