@@ -17,6 +17,7 @@ export const InputLabelStyle = styled.div`
     width: ${(props) => (props?.inputWidth ? `${props?.inputWidth}px` : '600px')};
     height: ${(props) => (props?.inputHeight ? `${props?.inputHeight}px` : '50px')};
     padding-left: 14px;
+    padding-right: 14px;
     border-radius: 8px;
     border: 1px solid #dadada;
   }
