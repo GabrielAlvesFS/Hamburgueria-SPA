@@ -10,8 +10,10 @@ export const StyledLink = styled(Link)`
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  margin: 5px;
-
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  width: 100px;
+  border-radius: 4px;
   &:hover {
     background-color: #ecb9378a;
   }
