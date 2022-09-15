@@ -12,6 +12,14 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   margin: 5px;
 
+  &:hover {
+    background-color: #ecb9378a;
+  }
+
+  &:focus {
+    background-color: #ecb9378a;
+  }
+
   img {
     max-height: 100px;
   }
