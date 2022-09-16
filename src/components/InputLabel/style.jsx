@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const InputLabelStyle = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: ${(props) => (props?.gap ? `${props?.gap}px` : '12px')};
+
 
   label {
     text-align: left;

@@ -1,13 +1,16 @@
 import { InputLabelStyle } from './style';
 
 export function InputLabel({
-  labelName, placeholderName, inputWidth, inputHeight,
+  labelName, placeholderName, inputWidth, inputHeight, inputType, required, gap,
 }) {
   return (
-    <InputLabelStyle inputWidth={inputWidth} inputHeight={inputHeight}>
+    <InputLabelStyle inputWidth={inputWidth} inputHeight={inputHeight} gap={gap}>
       <label htmlFor="input">{labelName}</label>
-      <input type="text" id="input" placeholder={placeholderName} />
+      {
+        required === 'true'
+          ? <input type={inputType} id="input" placeholder={placeholderName} required />
+          : <input type={inputType} id="input" placeholder={placeholderName} />
+      }
     </InputLabelStyle>
-
   );
 }
