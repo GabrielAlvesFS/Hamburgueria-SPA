@@ -7,47 +7,67 @@ export function Payment() {
   return (
 
     <PaymentStyle>
-      <div>
-        <p> VOLTAR</p>
-      </div>
-      <form>
+      <>
+        <p className="returnPage"> ← VOLTAR</p>
+      </>
 
-        <InputLabelStyle>
-          <label htmlFor="input">Nome:</label>
-          <input type="text" name="nome" id="nome" />
-        </InputLabelStyle>
+      <section className="secContainer">
+        <form className="formContainer">
 
-        <InputLabelStyle>
-          <label htmlFor="input">Celular:</label>
-          <input type="text" name="nome" id="nome" />
-        </InputLabelStyle>
+          <>
+            <p className="data"> Seus dados</p>
+          </>
 
-        <div>
-          <p>ENTREGA</p>
-        </div>
+          <InputLabelStyle>
+            <label htmlFor="input">Nome:</label>
+            <input type="text" name="nome" id="nome" />
 
-        <div className="radioContainer">
-          <input type="radio" name="adress" id="retirar" />
-          <label htmlFor="retirar">Retirar</label>
-          <input type="radio" name="adress" id="delivery" />
-          <label htmlFor="delivery">Delivery</label>
-        </div>
+          </InputLabelStyle>
 
-        <div>
-          <p>PAGAMENTO</p>
-          <p>Metodo de Pagamento</p>
-        </div>
+          <InputLabelStyle>
+            <label htmlFor="input">Celular:</label>
+            <input type="text" name="nome" id="nome" />
+          </InputLabelStyle>
 
-        <div className="radioContainerPayment">
-          <input type="radio" name="payment" id="cartao" />
-          <label htmlFor="cartao">Cartão</label>
-          <input type="radio" name="payment" id="dinheiro" />
-          <label htmlFor="dinheiro">Dinheiro</label>
-        </div>
+          <>
+            <p className="data">Entrega</p>
+          </>
 
-        <Button>Confirmar pedidos</Button>
+          <section className="radioContainerAdress">
+            <div>
+              <input type="radio" name="adress" id="red" />
+              <label htmlFor="retirar">Retirar na loja</label>
+            </div>
+            <div>
+              <input type="radio" name="adress" id="red" />
+              <label htmlFor="delivery">Delivery</label>
+            </div>
 
-      </form>
+          </section>
+
+          <>
+            <p className="data">Pagamento</p>
+            <p className="paymentMethod">Metodo de Pagamento:</p>
+          </>
+
+          <section className="radioContainerPayment">
+
+            <div>
+              <input className="inputRadio" type="radio" name="payment" id="red" />
+              <label htmlFor="cartao">Cartão</label>
+            </div>
+            <div>
+              <input type="radio" name="payment" id="red" />
+              <label htmlFor="dinheiro">Dinheiro</label>
+            </div>
+
+          </section>
+
+          <Button>Confirmar pedido</Button>
+
+        </form>
+
+      </section>
 
     </PaymentStyle>
 
