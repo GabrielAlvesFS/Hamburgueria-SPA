@@ -5,14 +5,20 @@ import Aperitivos from '../../assets/aperitivos.svg';
 import Bebidas from '../../assets/bebidas.svg';
 import Burguers from '../../assets/burguers.svg';
 import Sobremesas from '../../assets/sobremesas.svg';
+import User from '../../assets/user.png';
 
 export const SideMenu = () => (
   <aside>
     <nav>
       <MenuCardContainer>
         <MenuCard
-          text="Bebidas"
-          image={Bebidas}
+          className="userCard"
+          text="Login"
+          image={User}
+        />
+        <MenuCard
+          text="Burguers"
+          image={Burguers}
         />
         <MenuCard
           text="Sobremesas"
@@ -23,8 +29,8 @@ export const SideMenu = () => (
           image={Aperitivos}
         />
         <MenuCard
-          text="Burguers"
-          image={Burguers}
+          text="Bebidas"
+          image={Bebidas}
         />
       </MenuCardContainer>
     </nav>
