@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const BurguersStyle = styled.div`
+export const PageContainer = styled.div`
   display: flex;
 `;

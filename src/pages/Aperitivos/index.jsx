@@ -3,12 +3,12 @@ import { Itens } from '../../components/Itens';
 import Cart from '../../components/Cart';
 import { PageContainer } from '../../styles/style';
 
-export const Burguers = () => (
+export const Aperitivos = () => (
   <PageContainer>
     <SideMenu />
     <Itens
-      itemType="Hambúrguer"
-      title="Burguers 🍔"
+      itemType="Aperitivos"
+      title="Aperitivos 🍟"
     />
     <Cart />
   </PageContainer>
