@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styles/device';
 
 export const CartSection = styled.section`
   background: white;
@@ -18,6 +19,11 @@ export const CartSection = styled.section`
   .Button_finalizar {
     min-height: 50px;
     align-self: center;
+  }
+
+  @media ${device.laptopL}{
+    min-width: 550px;
+    max-width: 550px;
   }
 `;
 

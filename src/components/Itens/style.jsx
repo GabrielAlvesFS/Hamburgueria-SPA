@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styles/device';
 
 export const ItensStyle = styled.main`
   width: 100%;
@@ -34,5 +35,11 @@ export const ItensStyle = styled.main`
     grid-template-columns: repeat(3, 270px);
     gap: 2rem;
     padding-bottom: 2rem;
+  }
+
+  @media ${device.laptopL}{
+    .itens{
+      grid-template-columns: repeat(2, 270px);
+    }
   }
 `;
