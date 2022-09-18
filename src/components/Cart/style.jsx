@@ -1,26 +1,62 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CartSection = styled.section`
   background: white;
-  width: 600px;
-  height: 100vh;
   min-width: 600px;
-  padding: 30px 30px 100px 30px;
+  max-width: 600px;
+  height: 100vh;
+  padding: 30px 20px 50px 20px;
   display: flex;
   flex-direction: column;
 
   h2 {
-    margin-top: 50px;
+    margin-top: 20px;
     font-weight: 600;
     font-size: 24px;
+    line-height: 36px;
   }
   .Button_finalizar {
-    margin-top: 4em;
+    min-height: 50px;
+    align-self: center;
   }
 `;
+
 export const CartContent = styled.div`
   flex-grow: 1;
   overflow: auto;
+  margin-top: 31px;
+  padding-right: 10px;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }
+
+  /* &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+  } */
 
   .Cart-sacolaVazia {
     display: flex;
@@ -37,18 +73,12 @@ export const TotalCart = styled.section`
   font-size: 18px;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 2rem;
+  margin: 3rem 0;
+  padding-right: 1.4rem;
   display: flex;
 
   p {
     color: red;
     padding-left: 30px;
-  }
-
-  button {
-    width: 397px;
-    margin: 20px auto;
-    background-color: red;
-    color: white;
   }
 `;
