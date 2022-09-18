@@ -6,22 +6,19 @@ export function Payment() {
   return (
 
     <PaymentStyle>
-      <>
-        <p className="returnPage"> ← VOLTAR</p>
-      </>
+
+      <p className="returnPage"> ← VOLTAR</p>
 
       <form className="secContainer">
 
-        <>
-          <p className="title"> Seus dados</p>
-        </>
+        <p className="title"> Seus dados</p>
 
-        <InputLabel labelName="Nome:" placeholderName="Nome completo" inputWidth={400} inputHeight={40} required="true">Nome:</InputLabel>
-        <InputLabel labelName="Celular:" placeholderName="(00) 00000-0000" inputWidth={400} inputHeight={40} required="true" />
+        <section className="infoSec">
+          <InputLabel labelName="Nome:" placeholderName="Nome completo" inputWidth={400} inputHeight={40} required="true">Nome:</InputLabel>
+          <InputLabel labelName="Celular:" placeholderName="(00) 00000-0000" inputWidth={400} inputHeight={40} required="true" />
+        </section>
 
-        <>
-          <p className="title">Adicionar endereço</p>
-        </>
+        {/* <p className="title">Adicionar endereço</p> */}
 
         <section className="adressInfo">
           <InputLabel labelName="CEP:" placeholderName="00000-000" inputWidth={200} inputHeight={40} required="true">CEP</InputLabel>
@@ -32,10 +29,8 @@ export function Payment() {
           <InputLabel labelName="Numero:" placeholderName="Numero" inputWidth={100} inputHeight={40} required="true"> Numero</InputLabel>
         </section>
 
-        <>
-          <p className="title">Pagamento</p>
-          <p className="paymentMethod">Metodo de Pagamento:</p>
-        </>
+        <p className="title">Pagamento</p>
+        <p className="paymentMethod">Metodo de Pagamento:</p>
 
         <section className="radioContainerPayment">
           <div>
