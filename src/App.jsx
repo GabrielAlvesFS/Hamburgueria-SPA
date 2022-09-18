@@ -5,6 +5,7 @@ import { Aperitivos } from './pages/Aperitivos';
 import { Burguers } from './pages/Burguers';
 import { Cadastro } from './pages/Cadastro';
 import { Home } from './pages/Home';
+import { Sobremesas } from './pages/Sobremesas';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Burguers" element={<Burguers />} />
         <Route path="/Aperitivos" element={<Aperitivos />} />
+        <Route path="/Sobremesas" element={<Sobremesas />} />
         <Route path="/Cadastro" element={<Cadastro />} />
       </Routes>
     </CartProvider>
