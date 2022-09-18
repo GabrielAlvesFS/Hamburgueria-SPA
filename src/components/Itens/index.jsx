@@ -31,6 +31,7 @@ export function Itens({ itemType, title }) {
                     description={current.descricao}
                     price={current.valor % 1 === 0 ? `${current.valor}.00` : `${current.valor}0`}
                     bg="#F8F7FF"
+                    product={current}
                   />
                 )
                 : <></>
