@@ -1,9 +1,13 @@
+import { HomeStyle, StyledLink } from './style';
+import { Button } from '../../components/Button/style';
+
 export function Home() {
   return (
-    <>
-      <div>Componente</div>
-      <div>Componente</div>
-      <div>Componente</div>
-    </>
+    <HomeStyle>
+      <h1>Home</h1>
+      <StyledLink to="/Burguers">
+        <Button>Cardápio</Button>
+      </StyledLink>
+    </HomeStyle>
   );
 }
