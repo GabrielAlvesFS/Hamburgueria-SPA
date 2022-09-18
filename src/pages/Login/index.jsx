@@ -14,12 +14,12 @@ export function Login() {
         </div>
 
         <div className="loginContainer">
-          <form action="" className="formContainer">
+          <form action="Burguers" className="formContainer">
             <h2 className="title">Bem vindo de volta</h2>
             <h1 className="title">Faça login na sua conta</h1>
             <InputLabel labelName="E-mail" placeholderName="Joãodasilva@gmail.com" inputWidth={350} inputHeight={50} required="true" gap={4} />
             <InputLabel labelName="Senha" placeholderName="Digite sua senha" inputWidth={350} inputHeight={50} required="true" gap={4} />
-            <Button className="logIn" width={347} height={50}>Entrar</Button>
+            <Button className="logIn" width={347} height={50} type="submit">Entrar</Button>
 
             <Button className="logInGoogle" width={347} height={50}>
               <img src={teste} alt="" />
