@@ -1,6 +1,5 @@
 import { InputLabel } from '../InputLabel/index';
 import { Button } from '../Button/style';
-import { InputLabelStyle } from '../InputLabel/style';
 import { PaymentStyle } from './style';
 
 export function Payment() {
@@ -11,63 +10,53 @@ export function Payment() {
         <p className="returnPage"> ← VOLTAR</p>
       </>
 
-      <section className="secContainer">
-        <form className="formContainer">
+      <form className="secContainer">
 
-          <>
-            <p className="data"> Seus dados</p>
-          </>
+        <>
+          <p className="title"> Seus dados</p>
+        </>
 
-          <InputLabelStyle>
-            <label htmlFor="input">Nome:</label>
-            <input type="text" name="nome" id="nome" />
+        <InputLabel labelName="Nome:" placeholderName="Nome completo" inputWidth={400} inputHeight={40} required="true">Nome:</InputLabel>
+        <InputLabel labelName="Celular:" placeholderName="(00) 00000-0000" inputWidth={400} inputHeight={40} required="true" />
 
-          </InputLabelStyle>
+        <>
+          <p className="title">Adicionar endereço</p>
+        </>
 
-          <InputLabelStyle>
-            <label htmlFor="input">Celular:</label>
-            <input type="text" name="nome" id="nome" />
-          </InputLabelStyle>
+        <section className="adressInfo">
+          <InputLabel labelName="CEP:" placeholderName="00000-000" inputWidth={200} inputHeight={40} required="true">CEP</InputLabel>
+          <InputLabel labelName="Estado:" placeholderName="Estado" inputWidth={200} inputHeight={40} required="true">Estado</InputLabel>
+          <InputLabel labelName="Cidade:" placeholderName="Cidade" inputWidth={200} inputHeight={40} required="true"> Cidade</InputLabel>
+          <InputLabel labelName="Bairro:" placeholderName="Bairro" inputWidth={200} inputHeight={40} required="true"> Bairro</InputLabel>
+          <InputLabel labelName="Rua:" placeholderName="Rua" inputWidth={200} inputHeight={40} required="true"> Rua</InputLabel>
+          <InputLabel labelName="Numero:" placeholderName="Numero" inputWidth={100} inputHeight={40} required="true"> Numero</InputLabel>
+        </section>
 
-          <>
-            <p className="data">Entrega</p>
-          </>
+        <>
+          <p className="title">Pagamento</p>
+          <p className="paymentMethod">Metodo de Pagamento:</p>
+        </>
 
-          <section className="radioContainerAdress">
-            <div>
-              <input type="radio" name="adress" id="red" />
-              <label htmlFor="retirar">Retirar na loja</label>
-            </div>
-            <div>
-              <input type="radio" name="adress" id="red" />
-              <label htmlFor="delivery">Delivery</label>
-            </div>
+        <section className="radioContainerPayment">
+          <div>
+            <input className="inputRadio" type="radio" name="payment" id="card" />
+            <label htmlFor="card">Cartão</label>
+          </div>
+          <div>
+            <input type="radio" name="payment" id="money" />
+            <label htmlFor="money">Dinheiro</label>
+          </div>
+          <div>
+            <input type="radio" name="payment" id="pix" />
+            <label htmlFor="Pix">Pix</label>
+          </div>
+        </section>
 
-          </section>
+        <section className="secBtn">
+          <Button className="paymentBtn">Confirmar pedido</Button>
+        </section>
 
-          <>
-            <p className="data">Pagamento</p>
-            <p className="paymentMethod">Metodo de Pagamento:</p>
-          </>
-
-          <section className="radioContainerPayment">
-
-            <div>
-              <input className="inputRadio" type="radio" name="payment" id="red" />
-              <label htmlFor="cartao">Cartão</label>
-            </div>
-            <div>
-              <input type="radio" name="payment" id="red" />
-              <label htmlFor="dinheiro">Dinheiro</label>
-            </div>
-
-          </section>
-
-          <Button>Confirmar pedido</Button>
-
-        </form>
-
-      </section>
+      </form>
 
     </PaymentStyle>
 
