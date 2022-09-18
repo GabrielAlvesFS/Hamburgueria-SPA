@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { InputLabel } from '../InputLabel/index';
 import { Button } from '../Button/style';
 import { PaymentStyle } from './style';
@@ -7,7 +8,9 @@ export function Payment() {
 
     <PaymentStyle>
 
-      <p className="returnPage"> ← VOLTAR</p>
+      <Link to="/Burguers">
+        <p className="returnPage"> ← VOLTAR</p>
+      </Link>
 
       <form className="secContainer">
 

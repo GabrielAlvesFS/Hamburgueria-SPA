@@ -5,7 +5,7 @@ export const PaymentStyle = styled.div`
   width: 100%;
   height: 100vh;
   background-color: #E5E5E5;
-  padding: 3% 0%;
+  padding: 5% 0%;
   display: flex;
   justify-content: center;
   overflow-y: scroll;
@@ -40,6 +40,7 @@ export const PaymentStyle = styled.div`
   font-weight: 600;
   font-size: 22px;
   line-height: 36px;
+  color: black;
 
 
 }
