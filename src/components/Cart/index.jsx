@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/cart';
 import ItemCart from '../CartItem/index';
 import { CartSection, CartContent, TotalCart } from './style';
@@ -41,9 +42,11 @@ export default function Cart() {
                 {cartTotal}
               </p>
             </TotalCart>
-            <Button className="Button_finalizar" width={400}>
-              Finalizar compra
-            </Button>
+            <Link className="Button_finalizar" to="/Pagamento">
+              <Button width={400}>
+                Finalizar compra
+              </Button>
+            </Link>
           </>
         ) : (
           <CartContent>
