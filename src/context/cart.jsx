@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState } from 'react';
 
 export const CartContext = createContext();
 
@@ -14,7 +14,7 @@ export default function CartProvider({ children }) {
       });
       const total = values.reduce(
         (previousValue, currentValue) => previousValue + currentValue,
-        0
+        0,
       );
       const totalFixed = total.toFixed(2);
       setCartTotal(totalFixed);
@@ -25,7 +25,7 @@ export default function CartProvider({ children }) {
     const newProductsCart = [...productsCart];
 
     const itens = newProductsCart.filter(
-      (product) => product.id === produto.id
+      (product) => product.id === produto.id,
     );
 
     if (itens && itens.length > 1) {
@@ -34,7 +34,7 @@ export default function CartProvider({ children }) {
       setProductsCart(newProductsCart);
     } else {
       const arrayFiltered = newProductsCart.filter(
-        (product) => product.id !== produto.id
+        (product) => product.id !== produto.id,
       );
       setProductsCart(arrayFiltered);
     }
