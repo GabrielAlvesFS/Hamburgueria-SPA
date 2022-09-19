@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { useMemo, createContext, useState } from 'react';
 
 export const CartContext = createContext();
 
@@ -9,7 +9,7 @@ export default function CartProvider({ children }) {
   const calculateTotal = () => {
     const values = [];
     if (productsCart.length > 0) {
-      productsCart.map((product) => {
+      productsCart.forEach((product) => {
         values.push(product.valor);
       });
       const total = values.reduce(
@@ -42,7 +42,7 @@ export default function CartProvider({ children }) {
 
   const uniqueProducts = () => {
     const uniqueProd = [];
-    productsCart.map((cartProduct) => {
+    productsCart.forEach((cartProduct) => {
       if (uniqueProd.indexOf(cartProduct) === -1) {
         uniqueProd.push(cartProduct);
       }
@@ -54,16 +54,18 @@ export default function CartProvider({ children }) {
     setProductsCart([...productsCart, product]);
   };
 
+  const fns = useMemo(() => ({
+    productsCart,
+    calculateTotal,
+    uniqueProducts,
+    addToCart,
+    cartTotal,
+    removeProductToCart,
+  }));
+
   return (
     <CartContext.Provider
-      value={{
-        productsCart,
-        calculateTotal,
-        uniqueProducts,
-        addToCart,
-        cartTotal,
-        removeProductToCart,
-      }}
+      value={fns}
     >
       {children}
     </CartContext.Provider>
