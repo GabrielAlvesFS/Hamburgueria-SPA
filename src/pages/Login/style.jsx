@@ -11,8 +11,8 @@ background-color: aliceblue;
 
 .container{
   display: flex;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   border-radius: 16px;
   box-shadow: 0px 10px 10px 0px #00000040;
 }
