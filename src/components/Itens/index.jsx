@@ -22,10 +22,11 @@ export function Itens({ itemType, title }) {
         <p className="title">{title}</p>
         <div className="itens">
           {
-            itens.map((current) => (
-              current.tipo === itemType
-                ? (
+            itens.map((current) => {
+              if (current.tipo === itemType) {
+                return (
                   <ItemCard
+                    key={current.id}
                     image={current.url_img}
                     title={current.nome}
                     description={current.descricao}
@@ -33,9 +34,10 @@ export function Itens({ itemType, title }) {
                     bg="#F8F7FF"
                     product={current}
                   />
-                )
-                : <></>
-            ))
+                );
+              }
+              return false;
+            })
           }
         </div>
       </div>
