@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { CartItem, ItemQuantity, ContainerImg } from "./style";
+import React, { useEffect, useState } from 'react';
+import { CartItem, ItemQuantity, ContainerImg } from './style';
 
 export default function ItemCart({
   product,
@@ -7,11 +7,11 @@ export default function ItemCart({
   addToCart,
   checkRemove,
 }) {
-  const [quantItens, setQuantItens] = useState("1");
+  const [quantItens, setQuantItens] = useState('1');
 
-  const qtdItens = (product) => {
+  const qtdItens = (currentProd) => {
     const filterItens = productsCart.filter(
-      (cartProduct) => cartProduct === product
+      (cartProduct) => cartProduct === currentProd,
     );
 
     setQuantItens(filterItens.length);
@@ -23,15 +23,20 @@ export default function ItemCart({
     product && (
       <CartItem id={product.id}>
         <ItemQuantity>
-          <button onClick={() => checkRemove(product)}>-</button>
+          <button type="button" onClick={() => checkRemove(product)}>-</button>
           <span>{quantItens}</span>
-          <button onClick={() => addToCart(product)}>+</button>
+          <button type="button" onClick={() => addToCart(product)}>+</button>
         </ItemQuantity>
         <ContainerImg>
           <img src={product.url_img} alt={product.nome} />
         </ContainerImg>
         <h3>{product.nome}</h3>
-        <p> R$ {product.valor.toFixed(2)}</p>
+        <p>
+          {' '}
+          R$
+          {' '}
+          {product.valor.toFixed(2)}
+        </p>
       </CartItem>
     )
   );
