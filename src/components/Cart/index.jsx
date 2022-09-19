@@ -27,6 +27,7 @@ export default function Cart() {
             <CartContent>
               {uniqueProd.map((product) => (
                 <ItemCart
+                  key={product.id}
                   product={product}
                   productsCart={productsCart}
                   addToCart={addToCart}
