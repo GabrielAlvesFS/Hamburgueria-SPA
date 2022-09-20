@@ -6,6 +6,7 @@ import { device } from '../../styles/device';
 
 export const HomeStyle = styled.div`
   background-image: url(${HomeBackground});
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   display: flex;
