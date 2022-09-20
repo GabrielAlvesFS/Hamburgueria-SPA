@@ -6,7 +6,7 @@ export function Pagamento() {
   return (
     <PageContainer>
       <Payment />
-      <Cart />
+      <Cart post />
     </PageContainer>
 
   );

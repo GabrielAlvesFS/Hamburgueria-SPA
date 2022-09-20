@@ -4,10 +4,12 @@ import { CartContext } from '../../context/cart';
 import { InputLabel } from '../InputLabel/index';
 import { Button } from '../Button/style';
 import { PaymentStyle } from './style';
+import { CartContext } from '../../context/cart';
 
 export function Payment() {
   const {
     productsCart,
+    confirmOrder,
   } = useContext(CartContext);
 
   const [form, setForm] = useState(true);
@@ -24,6 +26,7 @@ export function Payment() {
 
   const postPedido = (e) => {
     e.preventDefault();
+    confirmOrder()
   };
 
   return (
@@ -154,7 +157,11 @@ export function Payment() {
         </section>
 
         <section className="secBtn">
+
+          <Button className="paymentBtn">Confirmar pedido</Button>
+
           <Button className="paymentBtn" type="submit">Confirmar pedido</Button>
+
         </section>
 
       </form>
