@@ -4,14 +4,9 @@ import { CartContext } from '../../context/cart';
 import { InputLabel } from '../InputLabel/index';
 import { Button } from '../Button/style';
 import { PaymentStyle } from './style';
-import { CartContext } from '../../context/cart';
+import { cadastrarItemPedido, cadastrarPedido } from '../../services/pedidosApi';
 
 export function Payment() {
-  const {
-    productsCart,
-    confirmOrder,
-  } = useContext(CartContext);
-
   const [form, setForm] = useState(true);
   const [inputValue, setInputValue] = useState({
     nome: '',
@@ -22,11 +17,67 @@ export function Payment() {
     bairro: '',
     rua: '',
     numero: '',
+    metodo: '',
   });
 
-  const postPedido = (e) => {
+  const {
+    productsCart,
+    confirmOrder,
+  } = useContext(CartContext);
+
+  const pedidoBody = {
+    cliente_id: 404,
+    entregador_id: 404,
+    data_pedido: '0404-04-04',
+    metodo_pagamento: `${inputValue.metodo}`,
+  };
+
+  const qtdItem = (products) => {
+    const result = [];
+
+    let checkID = 0;
+    products.forEach((current) => {
+      let atual = current;
+
+      if (checkID !== current.id) {
+        productsCart.forEach((currentProd) => {
+          if (current.id === currentProd.id) {
+            atual = { ...atual, qtd: atual.qtd + 1 };
+            checkID = currentProd.id;
+          }
+        });
+
+        result.push(atual);
+      }
+    });
+
+    return result;
+  };
+
+  const postPedido = async (e) => {
     e.preventDefault();
-    confirmOrder()
+    confirmOrder();
+    setForm(false);
+    try {
+      if (productsCart.length > 0) {
+        const resPedido = await cadastrarPedido(pedidoBody);
+        const products = qtdItem(productsCart);
+
+        products.forEach(async (current) => {
+          const itemPedidoBody = {
+            pedido_id: `${resPedido.pedido_id}`,
+            item_id: current.id,
+            quantidade_itens: current.qtd,
+          };
+
+          const resItemPedido = await cadastrarItemPedido(itemPedidoBody);
+        });
+      } else {
+        throw new Error('O seu carrinho está vazio e não foi possível criar o pedido');
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -37,6 +88,7 @@ export function Payment() {
         <p className="returnPage"> ← VOLTAR</p>
       </Link>
 
+      { form && (
       <form className="secContainer" onSubmit={(e) => { postPedido(e); }}>
 
         <p className="title"> Seus dados</p>
@@ -143,28 +195,29 @@ export function Payment() {
 
         <section className="radioContainerPayment">
           <div>
-            <input checked={inputValue?.radio} className="inputRadio" type="radio" name="payment" id="card" required />
-            <label htmlFor="card">Cartão</label>
+            <input onChange={(e) => (e.target.checked === true ? setInputValue({ ...inputValue, metodo: 'débito' }) : false)} className="inputRadio" type="radio" name="payment" id="card" required />
+            <label htmlFor="card">Crédito</label>
           </div>
           <div>
-            <input checked={inputValue?.radio} type="radio" name="payment" id="money" required />
+            <input onChange={(e) => (e.target.checked === true ? setInputValue({ ...inputValue, metodo: 'crédito' }) : false)} className="inputRadio" type="radio" name="payment" id="card" required />
+            <label htmlFor="card">Débito</label>
+          </div>
+          <div>
+            <input onChange={(e) => (e.target.checked === true ? setInputValue({ ...inputValue, metodo: 'dinheiro' }) : false)} type="radio" name="payment" id="money" required />
             <label htmlFor="money">Dinheiro</label>
           </div>
           <div>
-            <input checked={inputValue?.radio} type="radio" name="payment" id="pix" required />
+            <input onChange={(e) => (e.target.checked === true ? setInputValue({ ...inputValue, metodo: 'pix' }) : false)} type="radio" name="payment" id="pix" required />
             <label htmlFor="Pix">Pix</label>
           </div>
         </section>
 
         <section className="secBtn">
-
-          <Button className="paymentBtn">Confirmar pedido</Button>
-
           <Button className="paymentBtn" type="submit">Confirmar pedido</Button>
-
         </section>
 
       </form>
+      )}
 
     </PaymentStyle>
 
