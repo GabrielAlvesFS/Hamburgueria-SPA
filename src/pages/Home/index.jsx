@@ -13,9 +13,10 @@ export function Home() {
     <>
       {loading === false ? (
         <HomeStyle>
-          <h1>Home</h1>
+          <h1>Kámen Burguers</h1>
+          <p>Confira o nosso cardápio e faça já o seu pedido!</p>
           <StyledLink to="/Burguers">
-            <Button>Cardápio</Button>
+            <Button>Saiba Mais</Button>
           </StyledLink>
         </HomeStyle>
       ) : (
