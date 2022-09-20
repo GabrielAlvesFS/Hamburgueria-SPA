@@ -88,3 +88,14 @@ export const TotalCart = styled.section`
     padding-left: 30px;
   }
 `;
+export const Finalizando = styled.section`
+
+section{
+  justify-content: center;
+  font-size:30px;
+}
+
+Button{
+  margin:1rem 8rem ;
+}
+`;
