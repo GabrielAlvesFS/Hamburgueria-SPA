@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
 import { ItensStyle } from './style';
 import { ItemCard } from '../ItemCard';
+import { listarItens } from '../../services/itensApi';
 
 export function Itens({ itemType, title }) {
   const [itens, setItens] = useState([]);
-  const url = 'https://hamburguer-api.herokuapp.com/itens';
 
   async function getItens() {
-    const data = await fetch(url);
-    const jsonData = await data.json();
-    setItens(jsonData);
+    const res = await listarItens();
+    setItens(res);
   }
 
   useEffect(() => {
