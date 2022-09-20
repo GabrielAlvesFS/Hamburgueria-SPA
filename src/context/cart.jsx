@@ -66,6 +66,7 @@ export default function CartProvider({ children }) {
     addToCart,
     cartTotal,
     removeProductToCart,
+    confirmOrder,
     order,
   }));
 
