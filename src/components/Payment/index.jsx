@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
 import { InputLabel } from '../InputLabel/index';
 import { Button } from '../Button/style';
 import { PaymentStyle } from './style';
+import { CartContext } from '../../context/cart';
 
 export function Payment() {
+  const {
+    confirmOrder,
+  } = useContext(CartContext);
   return (
 
     <PaymentStyle>
@@ -51,7 +56,7 @@ export function Payment() {
         </section>
 
         <section className="secBtn">
-          <Button className="paymentBtn">Confirmar pedido</Button>
+          <Button onClick={() => confirmOrder()} className="paymentBtn">Confirmar pedido</Button>
         </section>
 
       </form>
