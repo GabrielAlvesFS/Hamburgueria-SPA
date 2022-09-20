@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styles/device';
 
 export const LoadingImageContainer = styled.div`
   width: 120px;
@@ -8,6 +9,13 @@ export const LoadingImageContainer = styled.div`
     max-height: 120px;
     max-width: 120px;
   }
+
+  @media ${device.mobileL} {
+      img {
+        max-height: 70px;
+        max-width: 70px;
+      }
+    }
 
   @keyframes rotation {
     from {
