@@ -6,6 +6,7 @@ export default function ItemCart({
   productsCart,
   addToCart,
   checkRemove,
+  finish,
 }) {
   const [quantItens, setQuantItens] = useState('1');
 
@@ -21,23 +22,49 @@ export default function ItemCart({
 
   return (
     product && (
-      <CartItem id={product.id}>
-        <ItemQuantity>
-          <button type="button" onClick={() => checkRemove(product)}>-</button>
-          <span>{quantItens}</span>
-          <button type="button" onClick={() => addToCart(product)}>+</button>
-        </ItemQuantity>
-        <ContainerImg>
-          <img src={product.url_img} alt={product.nome} />
-        </ContainerImg>
-        <h3>{product.nome}</h3>
-        <p>
-          {' '}
-          R$
-          {' '}
-          {product.valor.toFixed(2)}
-        </p>
-      </CartItem>
+      <>
+        <CartItem id={product.id}>
+          {!finish ? (
+            <>
+              <ItemQuantity>
+                <button type="button" onClick={() => checkRemove(product)}>-</button>
+                <span>{quantItens}</span>
+                <button type="button" onClick={() => addToCart(product)}>+</button>
+              </ItemQuantity>
+              <ContainerImg>
+                <img src={product.url_img} alt={product.nome} />
+              </ContainerImg>
+              <h3>{product.nome}</h3>
+              <p>
+                {' '}
+                R$
+                {' '}
+                {product.valor.toFixed(2)}
+              </p>
+            </>
+          ) : (
+            <>
+              <ItemQuantity>
+                <span>
+                  {quantItens}
+                  X
+                </span>
+              </ItemQuantity>
+              <ContainerImg>
+                <img src={product.url_img} alt={product.nome} />
+              </ContainerImg>
+              <h3>{product.nome}</h3>
+              <p>
+                {' '}
+                R$
+                {' '}
+                {product.valor.toFixed(2)}
+              </p>
+            </>
+          )}
+
+        </CartItem>
+      </>
     )
   );
 }
