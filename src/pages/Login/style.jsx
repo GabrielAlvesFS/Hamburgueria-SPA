@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { device } from '../../styles/device';
 
 export const LoginStyle = styled.main`
 display: flex;
@@ -31,6 +32,7 @@ background-color: aliceblue;
 .imageContainer img{
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
@@ -72,6 +74,33 @@ background-color: aliceblue;
   align-items: center;
   gap: 1rem;
 }
+
+@media ${device.laptop}{
+
+  .imageContainer  {
+
+  display: none;
+
+  }
+
+  .loginContainer{
+    width: 100%;
+    border-radius: 00px;
+  }
+}
+
+@media ${device.tablet}{
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.loginContainer{
+  border-radius: 00px;
+}
+}
+
 `;
 
 export const StyledLink = styled(Link)`
