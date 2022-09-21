@@ -55,14 +55,15 @@ export default function Cart({ post }) {
     handleTogle(togle);
     try {
       const products = qtdItem(productsCart);
-
+      let num = 0;
       products.forEach(async (current) => {
         const itemPedidoBody = {
           item_id: `${current.id}`,
           quantidade_itens: `${current.qtd}`,
         };
 
-        const resItemPedido = await alterarItemPedido(itemPedidoBody, pedido, current.id);
+        const resItemPedido = await alterarItemPedido(itemPedidoBody, pedido, itemPedidoID[num]);
+        num += 1;
       });
     } catch (error) {
       console.log(error);
@@ -72,12 +73,13 @@ export default function Cart({ post }) {
   const deletePedido = async () => {
     try {
       const products = qtdItem(productsCart);
+      let num = 0;
 
-      products.forEach(() => {
-        itemPedidoID.forEach(async (current) => {
-          const resItemPedido = await deleteItemPedido(pedido, current);
-        });
+      products.forEach(async () => {
+        const resItemPedido = await deleteItemPedido(pedido, itemPedidoID[0]);
+        num += 1;
       });
+
       setItemPedidoID([]);
       setProductsCart([]);
       setCartTotal(0);
