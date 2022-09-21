@@ -95,6 +95,34 @@ export const CadastroStyle = styled.main`
     font-weight: 400;
   }
 
+
+  @media ${device.mobileM}{
+    height: 90vh;
+    font-size:14px;
+    
+    .container{
+      height: 80%;
+    }
+    
+    .imageContainer {
+      display:none;
+    }
+    
+    .cadastroContainer{
+      width: 100%;
+    }
+
+    input{
+      width:100%;
+      font-size:14px;
+    }
+    
+    button{
+      width:100%;
+      font-size:15px;
+    }
+  }
+
   @media (${device.laptop}) {
     .imageContainer{
       display: none;

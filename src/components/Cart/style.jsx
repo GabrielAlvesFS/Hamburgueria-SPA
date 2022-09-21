@@ -25,6 +25,16 @@ export const CartSection = styled.section`
     min-width: 550px;
     max-width: 550px;
   }
+  @media ${device.mobileM}{
+  height: 80vh;
+  align-items:center;
+  min-width: 375px;
+  max-width: 375px;
+button{
+  width:100%;
+}
+
+  }
 `;
 
 export const CartContent = styled.div`
@@ -46,23 +56,6 @@ export const CartContent = styled.div`
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
   }
-
-  /* &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
-    background-color: #F5F5F5;
-  }
-
-  &::-webkit-scrollbar {
-    width: 12px;
-    background-color: #F5F5F5;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #555;
-  } */
 
   .Cart-sacolaVazia {
     display: flex;
@@ -98,4 +91,8 @@ section{
 Button{
   margin:1rem 8rem ;
 }
+@media ${device.mobileM}{
+  Button{
+  margin:0.3rem 0.3rem ;
+}}
 `;

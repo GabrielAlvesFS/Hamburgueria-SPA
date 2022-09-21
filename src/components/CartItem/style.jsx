@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { device } from '../../styles/device';
 
 export const CartItem = styled.section`
   display: flex;
@@ -15,6 +16,11 @@ export const CartItem = styled.section`
     font-size: 18px;
     line-height: 27px;
     color: red;
+  }
+  @media ${device.mobileM}{
+  p, h3{
+    font-size:15px;
+  }
   }
 `;
 
@@ -40,6 +46,9 @@ export const ItemQuantity = styled.section`
     color: red;
     width: 28px;
     text-align: center;
+  }
+  @media ${device.mobileM}{
+    span{font-size: 16px;}
   }
 `;
 
