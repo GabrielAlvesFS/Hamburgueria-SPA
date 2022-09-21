@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styles/device';
 
 export const PaymentStyle = styled.div`
   position: relative;
@@ -41,7 +42,6 @@ export const PaymentStyle = styled.div`
   font-size: 22px;
   line-height: 36px;
   color: black;
-
 
 }
 
@@ -110,4 +110,23 @@ input[type=radio] {
   background-color: #ff4040
 }
 
+@media ${device.mobileM}{
+
+  .returnPage {
+  left: 30px;
+  top: 10px;
+  font-size: 18px;}
+  .secContainer{
+    width: 90%;
+    margin-top: 20px;
+}
+.infoSec{
+  width: 90%;
+}
+.adressInfo  {
+  width: 90%;
+  display: flex;
+flex-direction: column;
+}
+}
 `;

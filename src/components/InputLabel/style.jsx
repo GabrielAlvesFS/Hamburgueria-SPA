@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styles/device';
 
 export const InputLabelStyle = styled.div`
   display: flex;
@@ -29,4 +30,10 @@ export const InputLabelStyle = styled.div`
     line-height: 24px;
     color: #848484;
   }
+
+  @media ${device.mobileM}{
+  input{
+    width:100%
+  }
+}
 `;

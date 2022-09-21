@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { device } from '../../styles/device';
 
 export const CadastroStyle = styled.main`
   display: flex;
@@ -91,6 +92,29 @@ export const CadastroStyle = styled.main`
     border: 1px solid #000;
     box-shadow: none;
     font-weight: 400;
+  }
+
+  @media ${device.mobileM}{
+  height: 90vh;
+  font-size:14px;
+.container{
+  height: 80%;
+}
+.imageContainer {
+  display:none;
+}
+.cadastroContainer{
+  width: 100%;
+}
+
+input{
+  width:100%;
+  font-size:14px;
+}
+button{
+  width:100%;
+  font-size:15px;
+}
   }
 `;
 

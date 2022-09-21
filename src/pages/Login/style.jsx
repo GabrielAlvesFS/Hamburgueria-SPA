@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { device } from '../../styles/device';
 
 export const LoginStyle = styled.main`
 display: flex;
@@ -8,7 +9,20 @@ justify-content: center;
 width: 100%;
 height: 100vh;
 background-color: aliceblue;
+.returnPage {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  left: 50px;
+  top: 20px;
 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 36px;
+  color: black;
+}
 .container{
   display: flex;
   width: 90%;
@@ -16,8 +30,6 @@ background-color: aliceblue;
   border-radius: 16px;
   box-shadow: 0px 10px 10px 0px #00000040;
 }
-
-
 .imageContainer{
   display: flex;
   align-items: center;
@@ -27,14 +39,12 @@ background-color: aliceblue;
   width: 50%;
   height: 100%;
 }
-
 .imageContainer img{
   width: 100%;
   height: 100%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
-
 .loginContainer{
   display: flex;
   align-items: center;
@@ -42,7 +52,6 @@ background-color: aliceblue;
   width: 50%;
   height: 100%;
 }
-
 .loginContainer .formContainer{
   padding: 20px;
   display: flex;
@@ -64,14 +73,46 @@ background-color: aliceblue;
   padding-right: 8px;
   padding-left: 25px;
   padding-top: 4px;
- }
-
+}
 .cadastro{
   margin-top: 1.8rem;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
+@media ${device.mobileM}{
+  height: 90vh;
+.container{
+  height: 70%;
+}
+.returnPage {
+  font-size: 14px;
+}
+.imageContainer {
+  display:none;
+}
+.loginContainer{
+  width: 100%;
+}
+.formContainer{
+  align-items: center;
+  flex-direction: column;
+  font-size:14px;
+}
+h1{
+  font-size:30px;
+  text-align: center
+}
+input{
+  width:100%;
+  font-size:14px;
+}
+button{
+  width:100%;
+  font-size:15px;
+}
+  }
 `;
 
 export const StyledLink = styled(Link)`
