@@ -22,10 +22,26 @@ export const ItensStyle = styled.main`
     flex-direction: column;
   }
 
-  .title{
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .titleContainer .title{
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
+  }
+
+  .search {
+    position: relative;
+  }
+
+  .search .searchIcon {
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 12px;
   }
 
   .itens{
