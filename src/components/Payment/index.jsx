@@ -23,6 +23,8 @@ export function Payment() {
   const {
     productsCart,
     confirmOrder,
+    setPedido,
+    setItemPedidoID,
   } = useContext(CartContext);
 
   const pedidoBody = {
@@ -62,6 +64,8 @@ export function Payment() {
       if (productsCart.length > 0) {
         const resPedido = await cadastrarPedido(pedidoBody);
         const products = qtdItem(productsCart);
+        const ids = [];
+        setPedido(resPedido.pedido_id);
 
         products.forEach(async (current) => {
           const itemPedidoBody = {
@@ -71,6 +75,8 @@ export function Payment() {
           };
 
           const resItemPedido = await cadastrarItemPedido(itemPedidoBody);
+          ids.push(resItemPedido.itemPedido_id);
+          setItemPedidoID(ids);
         });
       } else {
         throw new Error('O seu carrinho está vazio e não foi possível criar o pedido');
