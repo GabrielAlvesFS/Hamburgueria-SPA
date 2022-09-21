@@ -6,6 +6,8 @@ export default function CartProvider({ children }) {
   const [productsCart, setProductsCart] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
   const [order, setOrder] = useState(false);
+  const [pedido, setPedido] = useState();
+  const [itemPedidoID, setItemPedidoID] = useState();
 
   const calculateTotal = () => {
     const values = [];
@@ -61,13 +63,19 @@ export default function CartProvider({ children }) {
 
   const fns = useMemo(() => ({
     productsCart,
+    setProductsCart,
     calculateTotal,
     uniqueProducts,
     addToCart,
     cartTotal,
+    setCartTotal,
     removeProductToCart,
     confirmOrder,
     order,
+    pedido,
+    setPedido,
+    itemPedidoID,
+    setItemPedidoID,
   }));
 
   return (
