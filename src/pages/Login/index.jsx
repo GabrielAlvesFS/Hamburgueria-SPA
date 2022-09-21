@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { LoginStyle, StyledLink } from './style';
 import { Button } from '../../components/Button/style';
 import { InputLabel } from '../../components/InputLabel';
@@ -18,9 +17,6 @@ export function Login() {
         <div className="imageContainer">
           <img src="./src/assets/burgerLogin.png" alt="" />
         </div>
-        <Link to="/Burguers">
-          <p className="returnPage"> ← VOLTAR</p>
-        </Link>
         <div className="loginContainer">
           <form action="Burguers" className="formContainer">
             <h2 className="title">Bem vindo de volta</h2>
@@ -40,7 +36,6 @@ export function Login() {
             </div>
           </form>
         </div>
-
       </div>
 
     </LoginStyle>

@@ -25,15 +25,15 @@ export const CartSection = styled.section`
     min-width: 550px;
     max-width: 550px;
   }
-  @media ${device.mobileM}{
-  height: 80vh;
-  align-items:center;
-  min-width: 375px;
-  max-width: 375px;
-button{
-  width:100%;
-}
+  @media (max-width: 1240px){
+    height: 80vh;
+    align-items:center;
+    min-width: 375px;
+    max-width: 375px;
 
+    button{
+      width:100%;
+    }
   }
 `;
 

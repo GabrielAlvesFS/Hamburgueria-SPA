@@ -42,11 +42,9 @@ export const ItensStyle = styled.main`
       grid-template-columns: repeat(2, 270px);
     }
   }
-  @media ${device.mobileM}{
-    width: 100%;
+  @media (max-width: 1240px){
     .itens{
       grid-template-columns: repeat(1, 270px);
-
     }
   }
   `;
