@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { device } from '../../styles/device';
 
 export const CadastroStyle = styled.main`
   display: flex;
@@ -31,6 +32,7 @@ export const CadastroStyle = styled.main`
   .imageContainer img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
   }
@@ -91,6 +93,28 @@ export const CadastroStyle = styled.main`
     border: 1px solid #000;
     box-shadow: none;
     font-weight: 400;
+  }
+
+  @media (${device.laptop}) {
+    .imageContainer{
+      display: none;
+    }
+
+    .cadastroContainer{
+      width: 100%;
+      border-radius: 16px;
+    }
+  }
+
+  @media (${device.tablet}) {
+    .container{
+      width: 100%;
+      height: 100%;
+    }
+
+    .cadastroContainer{
+      border-radius: 0px;
+    }
   }
 `;
 
