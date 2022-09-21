@@ -55,7 +55,6 @@ export default function Cart({ post }) {
     handleTogle(togle);
     try {
       const products = qtdItem(uniqueProd);
-      console.log(products);
       let num = 0;
       products.forEach((current) => {
         const itemPedidoBody = {
