@@ -62,5 +62,12 @@ export const ItensStyle = styled.main`
     .itens{
       grid-template-columns: repeat(1, 270px);
     }
+
+    .titleContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
   }
   `;
