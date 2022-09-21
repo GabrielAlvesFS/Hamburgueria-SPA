@@ -9,6 +9,9 @@ export function Home() {
   useEffect(() => {
     setTimeout(() => setLoading(false), 4000);
   }, []);
+  useEffect(() => {
+    document.title = 'Kámen Burguers';
+  }, []);
   return (
     <>
       {loading === false ? (

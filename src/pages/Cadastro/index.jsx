@@ -1,8 +1,12 @@
+import { useEffect } from 'react';
 import { CadastroStyle, StyledLink } from './style';
 import { InputLabel } from '../../components/InputLabel';
 import { Button } from '../../components/Button/style';
 
 export function Cadastro() {
+  useEffect(() => {
+    document.title = 'Kámen - Cadastro';
+  }, []);
   return (
     <CadastroStyle>
       <div className="container">

@@ -1,9 +1,14 @@
+import { useEffect } from 'react';
 import { LoginStyle, StyledLink } from './style';
 import { Button } from '../../components/Button/style';
 import { InputLabel } from '../../components/InputLabel';
 import teste from '../../assets/google.svg';
 
 export function Login() {
+  useEffect(() => {
+    document.title = 'Kámen - Login';
+  }, []);
+
   return (
 
     <LoginStyle>
