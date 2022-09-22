@@ -32,6 +32,7 @@ export const CadastroStyle = styled.main`
   .imageContainer img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
   }
@@ -94,27 +95,54 @@ export const CadastroStyle = styled.main`
     font-weight: 400;
   }
 
-  @media ${device.mobileM}{
-  height: 90vh;
-  font-size:14px;
-.container{
-  height: 80%;
-}
-.imageContainer {
-  display:none;
-}
-.cadastroContainer{
-  width: 100%;
-}
 
-input{
-  width:100%;
-  font-size:14px;
-}
-button{
-  width:100%;
-  font-size:15px;
-}
+  @media ${device.mobileM}{
+    height: 90vh;
+    font-size:14px;
+    
+    .container{
+      height: 80%;
+    }
+    
+    .imageContainer {
+      display:none;
+    }
+    
+    .cadastroContainer{
+      width: 100%;
+    }
+
+    input{
+      width:100%;
+      font-size:14px;
+    }
+    
+    button{
+      width:100%;
+      font-size:15px;
+    }
+  }
+
+  @media (${device.laptop}) {
+    .imageContainer{
+      display: none;
+    }
+
+    .cadastroContainer{
+      width: 100%;
+      border-radius: 16px;
+    }
+  }
+
+  @media (${device.tablet}) {
+    .container{
+      width: 100%;
+      height: 100%;
+    }
+
+    .cadastroContainer{
+      border-radius: 0px;
+    }
   }
 `;
 
