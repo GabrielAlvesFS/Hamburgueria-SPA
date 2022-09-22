@@ -5,6 +5,8 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/GabrielAlvesFS/Hamburgueria-SPA?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/GabrielAlvesFS/Hamburgueria-SPA?style=for-the-badge)
 ![Website](https://img.shields.io/website?color=orange&label=Status&style=for-the-badge&up_message=em%20andamento&url=https%3A%2F%2Fgithub.com%2FGabrielAlvesFS%2FHamburgueria-SPA)
+<br><br>
+
 ![KamenBurguers](https://imgur.com/DWu9Ehw.png)
 > Kámen Burguers é uma aplicação construída com ReactJS com o intuíto de fazer as operações CRUD de uma [API](https://github.com/GabrielAlvesFS/HamburgueriaAPI) construída por nosso squad!
 
