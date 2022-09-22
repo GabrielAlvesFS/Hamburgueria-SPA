@@ -22,9 +22,7 @@ Para rodar nosso projeto é necessário que você tenha instalado na sua máquin
 
 ## 🚀 Instalando Kámen Burguers
 
-### Para instalar a Kámen Burguers, siga estas etapas:
-
-Faça o clone do repositório em sua maquina através do terminal:
+### Faça o clone do repositório em sua maquina através do terminal:
 ```
 git clone https://github.com/GabrielAlvesFS/Hamburgueria-SPA.git
 ```
@@ -32,6 +30,9 @@ logo em seguida:
 ```
 cd Hamburgueria-SPA
 ```
+
+<br>
+
 ### Agora vamos instalar as dependências do projeto:
 
 #### com Yarn:
