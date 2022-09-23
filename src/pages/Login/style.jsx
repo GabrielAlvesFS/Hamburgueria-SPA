@@ -3,26 +3,13 @@ import { Link } from 'react-router-dom';
 import { device } from '../../styles/device';
 
 export const LoginStyle = styled.main`
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
-height: 100vh;
-background-color: aliceblue;
-.returnPage {
-  position: absolute;
-  width: 200px;
-  height: 40px;
-  left: 50px;
-  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
 
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 36px;
-  color: black;
-}
 .container{
   display: flex;
   width: 90%;
@@ -82,44 +69,6 @@ background-color: aliceblue;
   gap: 1rem;
 }
 
-@media ${device.mobileM}{
-  .container{
-    height: 70%;
-  }
-  .returnPage {
-    font-size: 14px;
-  }
-
-  .imageContainer {
-    display:none;
-  }
-
-  .loginContainer{
-    width: 100%;
-  }
-
-  .formContainer{
-    align-items: center;
-    flex-direction: column;
-    font-size:14px;
-  }
-
-  h1{
-    font-size:30px;
-    text-align: center
-  }
-
-  input{
-    width:100%;
-    font-size:14px;
-  }
-
-  button{
-    width:100%;
-    font-size:15px;
-  }
-}
-
 @media ${device.laptop}{
   .imageContainer  {
     display: none;
@@ -139,6 +88,34 @@ background-color: aliceblue;
 
   .loginContainer{
     border-radius: 0px;
+  }
+}
+
+@media ${device.mobileL} {
+  h1{
+    font-size:30px;
+    text-align: center
+  }
+}
+
+@media ${device.mobileM}{
+  .formContainer{
+    font-size:14px;
+  }
+
+  h1{
+    font-size:30px;
+    text-align: center
+  }
+
+  input{
+    width:100%;
+    font-size:14px;
+  }
+
+  button{
+    width:100%;
+    font-size:15px;
   }
 }
 

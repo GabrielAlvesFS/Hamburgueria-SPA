@@ -95,33 +95,6 @@ export const CadastroStyle = styled.main`
     font-weight: 400;
   }
 
-
-  @media ${device.mobileM}{
-    font-size:14px;
-
-    .container{
-      height: 80%;
-    }
-
-    .imageContainer {
-      display:none;
-    }
-
-    .cadastroContainer{
-      width: 100%;
-    }
-
-    input{
-      width:100%;
-      font-size:14px;
-    }
-
-    button{
-      width:100%;
-      font-size:15px;
-    }
-  }
-
   @media (${device.laptop}) {
     .imageContainer{
       display: none;
@@ -133,16 +106,35 @@ export const CadastroStyle = styled.main`
     }
   }
 
-  @media (${device.tablet}) {
+   @media (${device.tablet}) {
     .container{
       width: 100%;
       height: 100%;
     }
 
+    #input{
+      width: 350px;
+    }
+
     .cadastroContainer{
       border-radius: 0px;
     }
+
   }
+
+  @media ${device.mobileM}{
+    font-size:14px;
+
+    input{
+      width:100%;
+      font-size:14px;
+    }
+
+    button{
+      font-size:15px;
+    }
+  }
+
 `;
 
 export const StyledLink = styled(Link)`
