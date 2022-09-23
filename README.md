@@ -12,6 +12,10 @@
 
 <br>
 
+## 🔰 Nosso site
+### Para acessar o nosso deploy [clique aqui!](https://hamburgueria-spa.vercel.app/)
+
+
 ## 💻 Pré-requisitos
 Para rodar nosso projeto é necessário que você tenha instalado na sua máquina as ferramentas:
 -   Git
@@ -60,6 +64,25 @@ yarn dev
 ```
 npm run dev
 ```
+
+<br><br>
+
+## 📋 Documentação da Navegação do site
+### 1. Página inicial
+- Em Progresso
+
+### 2. Página de Cadastro
+- Em Progresso
+
+### 3. Página de Login
+- Em Progresso
+
+### 4. Páginas do Cardápio
+- Em Progresso
+
+### 5. Página de Pagamento
+- Em Progresso
+
 
 <br><br>
 
