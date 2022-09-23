@@ -16,6 +16,7 @@ export const CartSection = styled.section`
     font-size: 24px;
     line-height: 36px;
   }
+
   .Button_finalizar {
     min-height: 50px;
     align-self: center;
@@ -25,6 +26,7 @@ export const CartSection = styled.section`
     min-width: 550px;
     max-width: 550px;
   }
+
   @media (max-width: 1240px){
     height: 80vh;
     align-items:center;
@@ -35,6 +37,11 @@ export const CartSection = styled.section`
       width:100%;
     }
   }
+
+  @media ${device.laptop}{
+    display: none;
+  }
+
 `;
 
 export const CartContent = styled.div`
@@ -83,16 +90,18 @@ export const TotalCart = styled.section`
 `;
 export const Finalizando = styled.section`
 
-section{
-  justify-content: center;
-  font-size:30px;
-}
+  section{
+    justify-content: center;
+    font-size:30px;
+  }
 
-Button{
-  margin:1rem 8rem ;
-}
-@media ${device.mobileM}{
   Button{
-  margin:0.3rem 0.3rem ;
-}}
+    margin:1rem 8rem ;
+  }
+
+  @media ${device.mobileM}{
+    Button{
+    margin:0.3rem 0.3rem ;
+  }
+}
 `;
