@@ -4,7 +4,7 @@ import { device } from './device';
 export const PageContainer = styled.div`
   display: flex;
 
-  @media ${device.mobileM}{
-  flex-direction:column;
+  @media ${device.laptop}{
+    flex-direction:column;
   }
 `;
