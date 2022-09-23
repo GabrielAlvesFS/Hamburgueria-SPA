@@ -89,19 +89,24 @@ export const TotalCart = styled.section`
   }
 `;
 export const Finalizando = styled.section`
+  h2{
+    text-align: center;
+  }
 
   section{
     justify-content: center;
     font-size:30px;
   }
 
-  Button{
-    margin:1rem 8rem ;
+  .buttonsContainer{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   @media ${device.mobileM}{
-    Button{
-    margin:0.3rem 0.3rem ;
+
   }
-}
 `;

@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { CartContext } from '../../context/cart';
 import ItemCart from '../CartItem/index';
 import {
@@ -28,6 +29,8 @@ export default function Cart({ post }) {
   const uniqueProd = uniqueProducts();
   const [togle, setTogle] = useState(true);
   const handleTogle = (t) => setTogle(!t);
+  const [edit, setEdit] = useState(false);
+  const handleEdit = (current) => setEdit(!current);
 
   const qtdItem = (products) => {
     const result = [];
@@ -53,24 +56,38 @@ export default function Cart({ post }) {
 
   const putPedido = async () => {
     handleTogle(togle);
-    try {
-      const products = qtdItem(uniqueProd);
-      let num = 0;
-      products.forEach((current) => {
-        const itemPedidoBody = {
-          item_id: `${current.id}`,
-          quantidade_itens: `${current.qtd}`,
-        };
+    handleEdit(edit);
 
-        alterarItemPedido(itemPedidoBody, pedido, itemPedidoID[num]);
-        num += 1;
+    if (edit) {
+      toast.success('Pedido editado com sucesso!', {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 1000,
       });
-    } catch (error) {
-      console.log(error);
+
+      try {
+        const products = qtdItem(uniqueProd);
+        let num = 0;
+        products.forEach((current) => {
+          const itemPedidoBody = {
+            item_id: `${current.id}`,
+            quantidade_itens: `${current.qtd}`,
+          };
+
+          alterarItemPedido(itemPedidoBody, pedido, itemPedidoID[num]);
+          num += 1;
+        });
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
   const deletePedido = async () => {
+    toast.success('Pedido excluído com sucesso!', {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 1000,
+    });
+
     try {
       const products = qtdItem(uniqueProd);
       let num = 0;
@@ -179,13 +196,19 @@ export default function Cart({ post }) {
                       {cartTotal}
                     </p>
                   </TotalCart>
-                  <h2>Seu pedido está sendo preparado...</h2>
-                  <Button onClick={() => putPedido()}>
-                    Editar pedido
-                  </Button>
-                  <Button onClick={() => deletePedido()}>
-                    Cancelar pedido
-                  </Button>
+                  <h2 className="order">Seu pedido está sendo preparado...</h2>
+                  <div className="buttonsContainer">
+                    <Button onClick={() => putPedido()}>
+                      {
+                        edit === false
+                          ? 'Editar pedido'
+                          : 'Confirmar edição'
+                      }
+                    </Button>
+                    <Button onClick={() => deletePedido()}>
+                      Cancelar pedido
+                    </Button>
+                  </div>
                 </Finalizando>
               </>
             )}

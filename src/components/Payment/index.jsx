@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
+import { toast } from 'react-toastify';
 import { CartContext } from '../../context/cart';
 import { InputLabel } from '../InputLabel/index';
 import { Button } from '../Button/style';
@@ -63,6 +64,17 @@ export function Payment() {
     try {
       if (productsCart.length > 0) {
         const resPedido = await cadastrarPedido(pedidoBody);
+        if (resPedido.erro === false) {
+          toast.success('Pedido feito com sucesso!', {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 1000,
+          });
+        } else {
+          toast.error('Pedido não cadastrado!', {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 1000,
+          });
+        }
         const products = qtdItem(productsCart);
         const ids = [];
         setPedido(resPedido.pedido_id);
