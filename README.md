@@ -10,11 +10,10 @@
 ![KamenBurguers](https://imgur.com/DWu9Ehw.png)
 > Kámen Burguers é uma aplicação construída com ReactJS com o intuíto de fazer as operações CRUD de uma [API](https://github.com/GabrielAlvesFS/HamburgueriaAPI) construída por nosso squad!
 
-<br>
-
 ## 🔰 Nosso site
-### Para acessar o nosso deploy [clique aqui!](https://hamburgueria-spa.vercel.app/)
+### Para acessar o nosso deploy <a href="https://hamburgueria-spa.vercel.app/" target="_blank" > Clique Aqui! </a>
 
+<br>
 
 ## 💻 Pré-requisitos
 Para rodar nosso projeto é necessário que você tenha instalado na sua máquina as ferramentas:
