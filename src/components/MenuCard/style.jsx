@@ -32,16 +32,4 @@ export const MenuCardLink = styled(Link)`
     font-size: 14px;
     margin-top: 5px;
   }
-
-  @media ${device.mobileM}{
-      min-width: 50px;
-      max-width: 50px;
-      img {
-    max-height: 80px;
-  }
-
-    p {
-    font-size: 12px;
-  }
-  }
 `;
