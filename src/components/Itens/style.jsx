@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../styles/device';
 
 export const ItensStyle = styled.main`
-  width: 100%;
+  width: 30%;
   height: 100vh;
   overflow-y: auto;
   display: flex;
@@ -45,7 +45,7 @@ export const ItensStyle = styled.main`
   @media ${device.mobileM}{
     width: 100%;
     .itens{
-      grid-template-columns: repeat(1, 270px);
+      grid-template-columns: 270px;
 
     }
   }

@@ -97,17 +97,16 @@ export const CadastroStyle = styled.main`
 
 
   @media ${device.mobileM}{
-    height: 90vh;
     font-size:14px;
-    
+
     .container{
       height: 80%;
     }
-    
+
     .imageContainer {
       display:none;
     }
-    
+
     .cadastroContainer{
       width: 100%;
     }
@@ -116,7 +115,7 @@ export const CadastroStyle = styled.main`
       width:100%;
       font-size:14px;
     }
-    
+
     button{
       width:100%;
       font-size:15px;
