@@ -71,10 +71,4 @@ export const ItensStyle = styled.main`
       align-items: center;
     }
   }
-
-  /* @media (max-width: 1240px){
-    .itens{
-      grid-template-columns: 270px;
-    } */
-
   `;
