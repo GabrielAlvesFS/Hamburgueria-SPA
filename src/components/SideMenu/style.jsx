@@ -11,10 +11,11 @@ export const MenuCardContainer = styled.ul`
   @media ${device.mobileM}{
     flex-direction: row;
     height: fit-content;
-    justify-content: unset;
-    margin: 10px;
+    justify-content: space-between;
+    margin: 5px;
     gap: 20px;
-    min-width: 375px;
-    max-width: 375px;
+    min-width: 365px;
+    max-width: 365px;
+
   }
 `;
