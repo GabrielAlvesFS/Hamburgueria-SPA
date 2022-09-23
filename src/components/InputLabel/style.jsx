@@ -32,8 +32,8 @@ export const InputLabelStyle = styled.div`
   }
 
   @media ${device.mobileM}{
-  input{
-    width:100%
+    input{
+      width:100%;
+    }
   }
-}
 `;
