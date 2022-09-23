@@ -22,10 +22,26 @@ export const ItensStyle = styled.main`
     flex-direction: column;
   }
 
-  .title{
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .titleContainer .title{
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
+  }
+
+  .search {
+    position: relative;
+  }
+
+  .search .searchIcon {
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 12px;
   }
 
   .itens{
@@ -42,11 +58,17 @@ export const ItensStyle = styled.main`
       grid-template-columns: repeat(2, 270px);
     }
   }
-  @media ${device.mobileM}{
-    width: 100%;
+  @media (max-width: 1240px){
     .itens{
       grid-template-columns: 270px;
+    }
 
+
+    .titleContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
     }
   }
   `;

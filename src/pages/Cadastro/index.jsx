@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { CadastroStyle, StyledLink } from './style';
 import { InputLabel } from '../../components/InputLabel';
 import { Button } from '../../components/Button/style';
+import Burguer from '../../assets/BurgerCadastro.png';
 
 export function Cadastro() {
   useEffect(() => {
@@ -11,7 +12,7 @@ export function Cadastro() {
     <CadastroStyle>
       <div className="container">
         <div className="imageContainer">
-          <img src="./src/assets/BurguerCad.png" alt="Hambúrguer sendo capturado por soldadinhos" />
+          <img src={Burguer} alt="Hambúrguer sendo capturado por soldadinhos" />
         </div>
 
         <div className="cadastroContainer">

@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { LoginStyle, StyledLink } from './style';
 import { Button } from '../../components/Button/style';
 import { InputLabel } from '../../components/InputLabel';
-import teste from '../../assets/google.svg';
+import Google from '../../assets/google.svg';
+import Burguer from '../../assets/burgerLogin.png';
 
 export function Login() {
   useEffect(() => {
@@ -16,11 +16,8 @@ export function Login() {
 
       <div className="container">
         <div className="imageContainer">
-          <img src="./src/assets/burgerLogin.png" alt="" />
+          <img src={Burguer} alt="" />
         </div>
-        <Link to="/Burguers">
-          <p className="returnPage"> ← VOLTAR</p>
-        </Link>
         <div className="loginContainer">
           <form action="Burguers" className="formContainer">
             <h2 className="title">Bem vindo de volta</h2>
@@ -30,7 +27,7 @@ export function Login() {
             <Button className="logIn" width={347} height={50} type="submit">Entrar</Button>
 
             <Button className="logInGoogle" width={347} height={50}>
-              <img src={teste} alt="" />
+              <img src={Google} alt="" />
               Ou faça login com o google
             </Button>
 
@@ -40,7 +37,6 @@ export function Login() {
             </div>
           </form>
         </div>
-
       </div>
 
     </LoginStyle>
