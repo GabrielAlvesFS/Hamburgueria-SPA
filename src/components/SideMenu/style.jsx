@@ -9,12 +9,12 @@ export const MenuCardContainer = styled.ul`
   gap: 20px;
 
   @media ${device.mobileM}{
-      flex-direction: row;
-      height: fit-content;
-      justify-content: unset;
-      margin: 10px;
-      gap:5px;
-      min-width: 375px;
-  max-width: 375px;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: unset;
+    margin: 10px;
+    gap: 20px;
+    min-width: 375px;
+    max-width: 375px;
   }
 `;

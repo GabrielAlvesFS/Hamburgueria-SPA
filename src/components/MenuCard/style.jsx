@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { device } from '../../styles/device';
 
 export const MenuCardLi = styled.li`
   list-style-type: none;
@@ -32,4 +33,15 @@ export const MenuCardLink = styled(Link)`
     margin-top: 5px;
   }
 
+  @media ${device.mobileM}{
+      min-width: 50px;
+      max-width: 50px;
+      img {
+    max-height: 80px;
+  }
+
+    p {
+    font-size: 12px;
+  }
+  }
 `;
