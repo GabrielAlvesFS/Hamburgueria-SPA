@@ -8,6 +8,24 @@ export const MenuCardContainer = styled.ul`
   height: 100vh;
   gap: 20px;
 
+  @media ${device.laptop}{
+    flex-direction: row;
+    width: 100%;
+    height: 106px;
+  }
+
+  @media ${device.tablet}{
+    flex-direction: row;
+    width: 100%;
+    height: 106px;
+    overflow-x: scroll;
+  }
+
+  @media (max-width: 600px){
+    justify-content: flex-start;
+  }
+
+
   @media ${device.mobileM}{
     flex-direction: row;
     height: fit-content;
@@ -16,6 +34,5 @@ export const MenuCardContainer = styled.ul`
     gap: 20px;
     min-width: 365px;
     max-width: 365px;
-
   }
 `;
