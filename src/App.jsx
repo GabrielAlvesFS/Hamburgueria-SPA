@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import CartProvider from './context/cart';
 import './global.css';
 import { Aperitivos } from './pages/Aperitivos';
@@ -9,6 +10,7 @@ import { Login } from './pages/Login';
 import { Home } from './pages/Home';
 import { Sobremesas } from './pages/Sobremesas';
 import { Pagamento } from './pages/Pagamento';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Pagamento" element={<Pagamento />} />
       </Routes>
+      <ToastContainer />
     </CartProvider>
   );
 }
