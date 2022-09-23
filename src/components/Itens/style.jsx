@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../styles/device';
 
 export const ItensStyle = styled.main`
-  width: 30%;
+  width: 100%;
   height: 100vh;
   overflow-y: auto;
   display: flex;
@@ -58,11 +58,11 @@ export const ItensStyle = styled.main`
       grid-template-columns: repeat(2, 270px);
     }
   }
-  @media (max-width: 1240px){
+
+  @media (max-width: 600px){
     .itens{
       grid-template-columns: 270px;
     }
-
 
     .titleContainer {
       display: flex;
@@ -71,4 +71,10 @@ export const ItensStyle = styled.main`
       align-items: center;
     }
   }
+
+  /* @media (max-width: 1240px){
+    .itens{
+      grid-template-columns: 270px;
+    } */
+
   `;
