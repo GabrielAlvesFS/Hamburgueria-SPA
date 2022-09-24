@@ -136,6 +136,20 @@ d. Rota '/Bebidas': o usuário pode acessar todos os itens de tipo 'Bebidas' do 
 
 <br><br>
 
+## 👨‍💻 Colaboradores
+
+<table>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/gabrielalvesfs/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/81392380?v=4" width="100px;" alt=""/><br /><sub><b>Gabriel Alves</b></sub></a><br /><a href="https://github.com/GabrielAlvesFS" title="Github">👨‍🚀</a></td>
+   <td align="center"><a href="https://www.linkedin.com/in/magnusarthur/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/103611978?v=4" width="100px;" alt=""/><br /><sub><b>Magnus Artur</b></sub></a><br /><a href="" title="Github">👨‍🚀</a></td>
+<td align="center"><a href="https://www.linkedin.com/in/oslene-cerqueira/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/100585368?v=4" width="100px;" alt=""/><br /><sub><b>Oslene Cerqueira</b></sub></a><br /><a href="https://github.com/OsleneCerqueira" title="Github">👨‍🚀</a></td>
+<td align="center"><a href="https://www.linkedin.com/in/julia-zibordi/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/85354283?v=4" width="100px;" alt=""/><br /><sub><b>Julia Zibordi</b></sub></a><br /><a href="https://github.com/juliazib" title="Github">👨‍🚀</a></td>
+<td align="center"><a href="https://www.linkedin.com/in/jéssica-bispo-/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/104093035?v=4" width="100px;" alt=""/><br /><sub><b>Jéssica Bispo</b></sub></a><br /><a href="https://github.com/jessbispo" title="Github">👨‍🚀</a></td>
+ </tr>
+</table>
+
+<br>
+
 ## 📄 Licença
 
 Este projeto está sob a licença do MIT - veja o arquivo [LICENSE](https://github.com/GabrielAlvesFS/Hamburgueria-SPA/blob/main/LICENSE) para detalhes.
