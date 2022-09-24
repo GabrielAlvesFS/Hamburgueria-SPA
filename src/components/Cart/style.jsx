@@ -27,19 +27,19 @@ export const CartSection = styled.section`
     max-width: 550px;
   }
 
-  @media (max-width: 1240px){
-    height: 80vh;
-    align-items:center;
-    min-width: 375px;
-    max-width: 375px;
-
+  @media  ${device.laptop}{
+    padding: 5rem 1rem;
+    min-width: 70vw;
+    max-width: 70vw;
+    align-self:center;
+    display: ${(props) => (props?.display ? 'block' : 'none')};
     button{
       width:100%;
     }
   }
-
-  @media ${device.laptop}{
-    display: none;
+  @media  ${device.tablet}{
+    padding: 6rem 1rem;
+    max-width: 60rem;
   }
 
 `;
@@ -106,7 +106,4 @@ export const Finalizando = styled.section`
     gap: 1rem;
   }
 
-  @media ${device.mobileM}{
-
-  }
 `;

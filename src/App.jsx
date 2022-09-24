@@ -6,6 +6,7 @@ import { Aperitivos } from './pages/Aperitivos';
 import { Bebidas } from './pages/Bebidas';
 import { Burguers } from './pages/Burguers';
 import { Cadastro } from './pages/Cadastro';
+import { Carrinho } from './pages/Carrinho';
 import { Login } from './pages/Login';
 import { Home } from './pages/Home';
 import { Sobremesas } from './pages/Sobremesas';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/Sobremesas" element={<Sobremesas />} />
         <Route path="/Bebidas" element={<Bebidas />} />
         <Route path="/Cadastro" element={<Cadastro />} />
+        <Route path="/Carrinho" element={<Carrinho />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Pagamento" element={<Pagamento />} />
       </Routes>

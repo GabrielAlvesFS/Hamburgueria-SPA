@@ -9,7 +9,7 @@ import {
 import { Button } from '../Button/style';
 import { alterarItemPedido, deleteItemPedido } from '../../services/pedidosApi';
 
-export default function Cart({ post }) {
+export default function Cart({ post, show }) {
   const {
     productsCart,
     setProductsCart,
@@ -107,7 +107,7 @@ export default function Cart({ post }) {
 
   return (
     <>
-      <CartSection>
+      <CartSection display={show}>
         {(!post) ? (
           <>
             <h2>Seu pedido</h2>
