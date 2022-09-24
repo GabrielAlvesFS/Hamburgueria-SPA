@@ -27,7 +27,7 @@ export default function ItemCart({
           {!finish ? (
             <>
               <ItemQuantity>
-                <button type="button" onClick={() => checkRemove(product)}>-</button>
+                {quantItens === 1 ? (<></>) : (<button type="button" onClick={() => checkRemove(product)}>-</button>)}
                 <span>{quantItens}</span>
                 <button type="button" onClick={() => addToCart(product)}>+</button>
               </ItemQuantity>
