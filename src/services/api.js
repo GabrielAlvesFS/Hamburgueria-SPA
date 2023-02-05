@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://hamburguer-api.herokuapp.com/',
+  baseURL: 'https://hamburgueria-api.up.railway.app/',
 });
 
 export default api;
