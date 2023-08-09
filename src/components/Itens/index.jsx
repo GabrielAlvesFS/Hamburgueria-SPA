@@ -39,7 +39,7 @@ export function Itens({ itemType, title }) {
           {
             itemFilter.length > 0
               ? itemFilter.map((current) => {
-                if (current.tipo === itemType) {
+                
                   return (
                     <ItemCard
                       key={current.id}
@@ -51,8 +51,8 @@ export function Itens({ itemType, title }) {
                       product={{ ...current, qtd: 0 }}
                     />
                   );
-                }
-                return false;
+                
+                
               })
               : itens.map((current) => {
                 if (current.tipo === itemType) {
