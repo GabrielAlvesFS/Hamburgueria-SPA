@@ -39,22 +39,6 @@ export function Itens({ itemType, title }) {
           {
             itemFilter.length > 0
               ? itemFilter.map((current) => {
-                
-                  return (
-                    <ItemCard
-                      key={current.id}
-                      image={current.url_img}
-                      title={current.nome}
-                      description={current.descricao}
-                      price={current.valor % 1 === 0 ? `${current.valor}.00` : `${current.valor}0`}
-                      bg="#F8F7FF"
-                      product={{ ...current, qtd: 0 }}
-                    />
-                  );
-                
-                
-              })
-              : itens.map((current) => {
                 if (current.tipo === itemType) {
                   return (
                     <ItemCard
@@ -69,6 +53,22 @@ export function Itens({ itemType, title }) {
                   );
                 }
                 return false;
+              })
+              : itens.map((current) => {
+                
+                  return (
+                    <ItemCard
+                      key={current.id}
+                      image={current.url_img}
+                      title={current.nome}
+                      description={current.descricao}
+                      price={current.valor % 1 === 0 ? `${current.valor}.00` : `${current.valor}0`}
+                      bg="#F8F7FF"
+                      product={{ ...current, qtd: 0 }}
+                    />
+                  );
+                
+
               })
           }
         </div>
